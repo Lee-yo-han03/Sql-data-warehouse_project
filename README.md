@@ -1,11 +1,5 @@
-# Sql-data-warehouse_project
-Building a modern data warehouse with SQL Server, including ETL processes, data modeling, and analytics.
-The materials of the data warehouse project: the source files, every script from the videos, and the docs.
-
-You take raw files from two systems, a CRM and an ERP, and build one data warehouse in SQL Server. At the end, the data is clean and ready for analysis.
-
-New here? Open the setup guide in the 00_setup folder. It walks you through installing SQL Server and creating the database, on Windows and Mac, with the fixes for the common errors.
-
+# Data Warehouse and Analytics Project
+```
 sql-data-warehouse-project/
 ├── 00_setup/               the setup guide, and the one-click Docker start for Mac
 ├── 01_datasets/            the six source files the project loads
@@ -18,72 +12,71 @@ sql-data-warehouse-project/
 │   ├── silver/             cleans and prepares the data
 │   └── gold/               builds the tables for analysis
 └── 04_tests/               checks the quality of the silver and gold data
-The project reads the six files from C:\sql\dwh_project\01_datasets\. Put the folder there, or change the six paths in 03_scripts/bronze/proc_load_bronze.sql. The videos show the folders without numbers: datasets there is 01_datasets here, scripts is 03_scripts.
+```
 
-🏗️ Data Architecture
-The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers: Data Architecture
+The project reads the six files from `C:\sql\dwh_project\01_datasets\`. Put the folder there, or change the six paths in `03_scripts/bronze/proc_load_bronze.sql`. The videos show the folders without numbers: `datasets` there is `01_datasets` here, `scripts` is `03_scripts`.
 
-Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics.
-📖 Project Overview
+---
+## 🏗️ Data Architecture
+
+The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+![Data Architecture](02_docs/data_architecture.png)
+
+1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+
+---
+## 📖 Project Overview
+
 In this project, you:
 
-Design the architecture: a modern data warehouse with three layers, bronze, silver and gold.
-Build the ETL pipelines: load the source files and move the data through the layers.
-Model the data: facts and dimensions, ready for reports.
-Analyze it: answer business questions with SQL.
-🛠️ Important Links & Tools
-SQL Server and SSMS: the setup guide in 00_setup has the links and every step.
-Git: a GitHub account, to save and share your project.
-draw.io: to draw the architecture and the data model.
-Notion template: the project plan, ready to copy.
-Notion project steps: every phase and task of the project.
-🚀 Project Requirements
-Building the Data Warehouse (Data Engineering)
-Objective
+1. **Design the architecture:** a modern data warehouse with three layers, bronze, silver and gold.
+2. **Build the ETL pipelines:** load the source files and move the data through the layers.
+3. **Model the data:** facts and dimensions, ready for reports.
+4. **Analyze it:** answer business questions with SQL.
+
+---
+
+## 🛠️ Important Links & Tools
+
+- **Google colab & postgresql:** the setup guide in `00_setup` has the links and every step.
+- **[Git](https://github.com/):** a GitHub account, to save and share your project.
+- **[draw.io](https://www.drawio.com/):** to draw the architecture and the data model.
+- **[Notion template](https://www.notion.com/templates/sql-data-warehouse-project):** the project plan, ready to copy.
+- **[Notion project steps](https://thankful-pangolin-2ca.notion.site/SQL-Data-Warehouse-Project-16ed041640ef80489667cfe2f380b269?pvs=4):** every phase and task of the project.
+
+---
+
+## 🚀 Project Requirements
+
+### Building the Data Warehouse (Data Engineering)
+
+#### Objective
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
-Specifications
-Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
-Data Quality: Cleanse and resolve data quality issues prior to analysis.
-Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-Scope: Focus on the latest dataset only; historization of data is not required.
-Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-BI: Analytics & Reporting (Data Analysis)
-Objective
+#### Specifications
+- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
+- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
+- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
+- **Scope**: Focus on the latest dataset only; historization of data is not required.
+- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+
+---
+
+### BI: Analytics & Reporting (Data Analysis)
+
+#### Objective
 Develop SQL-based analytics to deliver detailed insights into:
+- **Customer Behavior**
+- **Product Performance**
+- **Sales Trends**
 
-Customer Behavior
-Product Performance
-Sales Trends
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
 
-For more details, refer to 02_docs/requirements.md.
-
-🎓 Learn with me
-Watch on YouTube, or take the guided version with a certificate on my Academy or Udemy.
-
-Course	YouTube	My Academy	Udemy
-SQL	Full course · Playlist	Full Package · Handbook	SQL Bootcamp · SQL for Analytics
-Python	Full course · Playlist	Full Package · Handbook	Python Bootcamp
-Tableau	Full course · Playlist	Full Package	Tableau Course · Chart Masterclass
-Power BI	Full course		
-Databricks	Full course		
-Materials on my website: SQL · Python · Tableau · Power BI
-
-The SQL projects
-Project	YouTube	Materials	Udemy
-Data Warehouse	Watch	this repository	Building a Modern Data Warehouse
-Exploratory Data Analysis	Watch	Repository	SQL for Exploratory Data Analysis
-Advanced Data Analytics	Watch	same repository	
-More on YouTube: Data projects · Data careers
-
-🤝 Connect
-LinkedIn Discord Instagram TikTok Newsletter Notion Roadmaps
-
+For more details, refer to [02_docs/requirements.md](02_docs/requirements.md).
 🛡️ License
 MIT. Use it, change it, share it, with attribution.
 
 🌟 About me
-I'm Yohan! who's aspiring DataEngineer. I'm trying to follow up the video and absorb skills used in the video
+I'm Yohan! who's aspiring DataEngineer. I'm trying to follow up the video and absorb skills used in the video https://www.youtube.com/watch?v=9GVqKuTVANE&t=14837s
